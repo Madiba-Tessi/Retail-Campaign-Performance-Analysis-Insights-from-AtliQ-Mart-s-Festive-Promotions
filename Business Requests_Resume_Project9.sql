@@ -37,23 +37,24 @@ UPDATE fact_events
 SET 
 quantity_sold_AP_updated = CASE 
                   WHEN promo_type = "BOGOF" THEN  `quantity_sold(after_promo)`*2
-                  ELSE base_price END
+                  ELSE `quantity_sold(after_promo)` END
 
 
 #4 Incremental quantity sold by Category
 SELECT Category,
 CONCAT(ROUND(
       (
-      SUM(quantity_sold_AP_updated - `quantity_sold(before_promo)`) / SUM(quantity_sold_AP_updated)
+      SUM(quantity_sold_AP_updated - `quantity_sold(before_promo)`) / SUM(`quantity_sold(before_promo)`)
       )*100
-,1),"%") AS ISU,
+,1),"%") AS "ISU%",
 RANK() OVER (ORDER BY 
-ROUND((SUM(quantity_sold_AP_updated - `quantity_sold(before_promo)`) / SUM(quantity_sold_AP_updated))*100,1)
+ROUND((SUM(quantity_sold_AP_updated - `quantity_sold(before_promo)`) / SUM(`quantity_sold(before_promo)`))*100,1)
 DESC) AS ranking
 FROM dim_products dp JOIN fact_events f
 ON dp.product_code = f.product_code
 WHERE campaign_id = "CAMP_DIW_01"
 GROUP BY Category
+
 
 
 ## New columns
@@ -75,16 +76,14 @@ total_revenue_before_promotion = (base_price) * (`quantity_sold(before_promo)`)
 
 #5 Most successful products accross campaigns
 SELECT Category, product_name,
-ROUND(
-      (SUM(total_revenue_after_promotion - total_revenue_before_promotion) / SUM(total_revenue_after_promotion)) * 100
-      ,1) AS IR_percentage
+CONCAT(ROUND(
+      (SUM(total_revenue_after_promotion - total_revenue_before_promotion) / SUM(total_revenue_before_promotion)) * 100
+      ,1),"%") AS IR_percentage
 FROM dim_products dp JOIN fact_events f
 ON dp.product_code = f.product_code
 GROUP BY product_name, Category
 ORDER BY IR_percentage DESC   
 LIMIT 5
-
-
 
 
 
