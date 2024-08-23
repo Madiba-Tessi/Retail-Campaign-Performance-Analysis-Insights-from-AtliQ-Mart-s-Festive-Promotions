@@ -7,8 +7,6 @@ AtliQ Mart is a retail giant with over 50 supermarkets in the southern region of
 ![KI](Read_me_images/KI_SS4.png)
 
 
-
-
 ![KI](Read_me_images/RC9_SPA.png)
 
 
@@ -28,6 +26,16 @@ AtliQ Mart is a retail giant with over 50 supermarkets in the southern region of
 
 
 
+
+
+
+
+
+
+
+
+
+![Dashboard link](https://public.tableau.com/app/profile/madiba6911/viz/RC9SalesPromotionsAnalysis/RC9SalesPromotionsAnalysis?publish=yes)
 
 
 Additionally, the senior executives had important business questions requiring SQL-based report generation.
