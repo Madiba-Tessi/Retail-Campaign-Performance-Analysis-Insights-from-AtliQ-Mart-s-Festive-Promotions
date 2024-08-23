@@ -1,8 +1,14 @@
 AtliQ Mart is a retail giant with over 50 supermarkets in the southern region of India. All their 50 stores ran a massive promotion during the Diwali 2023 and Sankranti 2024 (festive time in India) on their AtliQ branded products. Now the sales director wants to understand which promotions did well and which did not so that they can make informed decisions for their next promotional period.
+![KI](Read_me_images/KI_SS1.png)
+
+![KI](Read_me_images/KI_SS2.png)
+
+![KI](Read_me_images/KI_SS3.png)
+![KI](Read_me_images/KI_SS4.png)
 
 Additionally, the senior executives had important business questions requiring SQL-based report generation.
 
-Part 1 - SQL Report Insights 
+- SQL Report Insights 
 
 1-	Provide a list of products with a base price greater than 500 rupees and that are featured in the promo type of 'BOGOF' (BUY ONE GET ONE FREE)
 
@@ -33,14 +39,3 @@ This information will assist in assessing the category-wise success and impact o
 ![sql_request-5](Read_me_images/sql_request-5.png)
 
 This analysis helps identify the most successful products in terms of incremental revenue across our campaigns, assisting in product optimization
-
-
-
-![KI](Read_me_images/KI_SS1.png)
-
-![KI](Read_me_images/KI_SS2.png)
-
-![KI](Read_me_images/KI_SS3.png)
-![KI](Read_me_images/KI_SS4.png)
-
-
