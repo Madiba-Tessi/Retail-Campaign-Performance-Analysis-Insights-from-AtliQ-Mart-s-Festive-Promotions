@@ -25,7 +25,8 @@ The SQL queries can be found ![here](https://github.com/Madiba-Tessi/Retail-Camp
 
 ### Overall Campaign Performance
 
-     Both campaigns significantly boosted both sales and revenue   
+Both campaigns significantly boosted both sales and revenue   
+ 
 #### o	650,726 articles sold, representing a 211% increase.
 #### o	Total revenue reached 295.61 million rupees, marking a 110% increase.
 
