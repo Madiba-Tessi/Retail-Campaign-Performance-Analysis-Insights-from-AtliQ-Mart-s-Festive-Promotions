@@ -4,7 +4,7 @@ AtliQ Mart is a retail giant with over 50 supermarkets in the southern region of
 
 ## Data Structure
 Atliq Mart Database consists of four table: dim_campaigns; dim_products; dim_stores; fact_events
-![KI](Read_me_images/database_erd.png)
+![KI](Read_me_images/Dataset_erd.png)
 
 The project aims to provide insights on: 
 
